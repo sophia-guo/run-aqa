@@ -6,7 +6,7 @@ inputs:
     description: 'github-hosted default or customized'
     default: 'upstream'
   version:              # jdk version
-    description: 'testing jdk version (Required when jdksource is github-hosted or install-jdk.)'
+    description: 'testing jdk version (Required when jdksource is github-hosted, install-jdk or setup-java.)'
     required: false
   build_list:           # test catagory
     description: 
