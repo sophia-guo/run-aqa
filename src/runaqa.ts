@@ -98,6 +98,8 @@ async function installDependency(): Promise<void> {
         --root "C:\\cygwin64"`)
         core.addPath(`C:\\cygwin64\\bin`)
       }
+
+      await exec.exec(`wget --version`)
       await exec.exec(`C:/cygwin64/bin/git config --system core.autocrlf false`)
     } catch (error) {
       core.warning(error.message)

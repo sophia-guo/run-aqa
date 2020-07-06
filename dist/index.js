@@ -3326,6 +3326,7 @@ function installDependency() {
         --root "C:\\cygwin64"`);
                     core.addPath(`C:\\cygwin64\\bin`);
                 }
+                yield exec.exec(`wget --version`);
                 yield exec.exec(`C:/cygwin64/bin/git config --system core.autocrlf false`);
             }
             catch (error) {
