@@ -10,7 +10,7 @@ async function run(): Promise<void> {
     const customTarget = core.getInput('custom_target', {required: false})
     const openjdktestRepo = core.getInput('openjdk_testRepo', {required: false})
     const tkgRepo = core.getInput('tkg_Repo', {required: false})
-
+    
     //  let arch = core.getInput("architecture", { required: false })
     if (
       jdksource !== 'upstream' &&

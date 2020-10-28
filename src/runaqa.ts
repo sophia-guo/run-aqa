@@ -33,6 +33,8 @@ export async function runaqaTest(
   openjdktestRepo: string,
   tkgRepo: string
 ): Promise<void> {
+  core.info(`passing openjdktestRepo is ${openjdktestRepo}`)
+  exec.exec('pwd')
   await installDependency()
   process.env.BUILD_LIST = buildList
   if (!('TEST_JDK_HOME' in process.env)) process.env.TEST_JDK_HOME = getTestJdkHome(version, jdksource)

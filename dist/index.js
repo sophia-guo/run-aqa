@@ -3376,6 +3376,8 @@ if (!tempDirectory) {
 }
 function runaqaTest(version, jdksource, buildList, target, customTarget, openjdktestRepo, tkgRepo) {
     return __awaiter(this, void 0, void 0, function* () {
+        core.info(`passing openjdktestRepo is ${openjdktestRepo}`);
+        exec.exec('pwd');
         yield installDependency();
         process.env.BUILD_LIST = buildList;
         if (!('TEST_JDK_HOME' in process.env))
