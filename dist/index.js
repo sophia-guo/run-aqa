@@ -3378,7 +3378,10 @@ function runaqaTest(version, jdksource, buildList, target, customTarget, openjdk
     return __awaiter(this, void 0, void 0, function* () {
         yield installDependency();
         setSpec();
+        core.info(`buldlist is ${buildList}`);
         process.env.BUILD_LIST = buildList;
+        const tempBUild = process.env.BUILD_LIST;
+        core.info(`enviormnetn is ${tempBUild}`);
         if (!('TEST_JDK_HOME' in process.env))
             process.env.TEST_JDK_HOME = getTestJdkHome(version, jdksource);
         const workspace = process.env['GITHUB_WORKSPACE'] || '';

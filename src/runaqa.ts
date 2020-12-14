@@ -35,7 +35,11 @@ export async function runaqaTest(
 ): Promise<void> {
   await installDependency()
   setSpec()
+
+  core.info(`buldlist is ${buildList}`)
   process.env.BUILD_LIST = buildList
+  const tempBUild = process.env.BUILD_LIST
+  core.info(`enviormnetn is ${tempBUild}`)
   if (!('TEST_JDK_HOME' in process.env)) process.env.TEST_JDK_HOME = getTestJdkHome(version, jdksource)
   const workspace = process.env['GITHUB_WORKSPACE'] || ''
   if (!(workspace.includes('/openjdk-tests/openjdk-tests') || workspace.includes('\openjdk-tests\openjdk-tests'))) {
