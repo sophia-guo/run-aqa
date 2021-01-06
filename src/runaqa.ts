@@ -112,7 +112,7 @@ async function installDependencyAndSetup(): Promise<void> {
     await exec.exec('brew install ant-contrib')
     await exec.exec('sudo sysctl -w kern.sysv.shmall=655360')
     await exec.exec('sudo sysctl -w kern.sysv.shmmax=125839605760')
-    await exec.exec('sudo chown root:admin /cores;')
+    await exec.exec('sudo chown root:admin /cores')
     await exec.exec('sudo chmod 777 /cores')
   } else {
     await exec.exec('sudo apt-get update')
