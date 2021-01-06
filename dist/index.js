@@ -3460,6 +3460,8 @@ function installDependencyAndSetup() {
             yield exec.exec('brew install ant-contrib');
             yield exec.exec('sudo sysctl -w kern.sysv.shmall=655360');
             yield exec.exec('sudo sysctl -w kern.sysv.shmmax=125839605760');
+            yield exec.exec('sudo chown root:admin /cores;');
+            yield exec.exec('sudo chmod 777 /cores');
         }
         else {
             yield exec.exec('sudo apt-get update');
