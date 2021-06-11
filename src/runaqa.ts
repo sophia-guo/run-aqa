@@ -150,14 +150,14 @@ function setSpec(): void {
 }
 
 async function getOpenjdkTestRepo(openjdktestRepo: string): Promise<void> {
-  let repoBranch = ['adoptium/aqa-tests', 'master']
-  if (openjdktestRepo !== 'aqa-tests:master') {
+  let repoBranch = ['AdoptOpenJDK/openjdk-tests', 'master']
+  if (openjdktestRepo !== 'openjdk-tests:master') {
     repoBranch = parseRepoBranch(openjdktestRepo)
   }
   await exec.exec(
     `git clone --depth 1 -b ${repoBranch[1]} https://github.com/${repoBranch[0]}.git`
   )
-  process.chdir('aqa-tests')
+  process.chdir('openjdk-tests')
 }
 
 async function runGetSh(tkgRepo: string, vendorTestParams: string): Promise<void> {
