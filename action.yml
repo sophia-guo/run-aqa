@@ -18,9 +18,9 @@ inputs:
     description:
     required: false
   openjdk_testRepo:
-    description: 'aqa-tests Repo'
+    description: 'openjdk-tests Repo'
     required: false
-    default: 'aqa-tests:master'
+    default: 'openjdk-tests:master'
   tkg_Repo:
     description: 'TKG Repo'
     required: false
